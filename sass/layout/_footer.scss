@@ -39,9 +39,16 @@
 
   &__item {
     display: inline-block;
+
     &:not(:last-child) {
       margin-right: 1.5rem;
+
+      @include respond(tab-port) {
+        margin-right: 0.5rem;
+      }
     }
+
+
   }
 
   &__link {
@@ -66,8 +73,8 @@
   &__copyright {
     border-top: 1px solid $color-grey-dark;
     padding-top: 2rem;
-    display: inline-block;
     width: 80%;
+    float: right;
 
     @include respond(tab-port) {
       width: 100%;
